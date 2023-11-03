@@ -1,0 +1,9 @@
+# Specify a base url for all http requests
+schema @server(baseURL: "http://localhost:3030", port: 8000) {
+  query: Query
+}
+
+type Query {
+  # Specify the http path for the users query
+  hello: String @http(path: "/hello/world")
+}
